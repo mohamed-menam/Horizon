@@ -1,0 +1,46 @@
+<odoo>
+
+    <record id="module_module_contacts" model="ir.module.category">
+        <field name="name">Sale</field>
+        <field name="description"> Creat Sale</field>
+        <field name="sequence">50</field>
+    </record>
+
+
+    <record id="module_name_own_documents" model="res.groups">
+        <field name="name">Create Sale</field>
+        <field name="category_id" ref="module_module_contacts" />
+    </record>
+
+<!-- 
+    <record id="model_name_rule_user" model="ir.rule">
+        <field name="name">contacts</field>
+        <field name="model_id" ref="model_res_partner" />
+        <field name="domain_force">['|', ('type', '!=', 'private'), ('type', '=', False),
+            ('user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('module_name_own_documents'))]" />
+    </record> -->
+
+
+    <!-- <record id="moduleselll_module_contacts" model="ir.module.category">
+        <field name="name">crm</field>
+        <field name="description">Expected Revenue</field>
+        <field name="sequence">50</field>
+    </record>
+
+
+    <record id="Expected_Revenue_group" model="res.groups">
+        <field name="name">Expected Revenue</field>
+        <field name="category_id" ref="moduleselll_module_contacts" />
+    </record>
+
+
+    <record id="modeldks_name_rule_user" model="ir.rule">
+        <field name="name">salessss</field>
+        <field name="model_id" ref="model_res_partner" />
+        <field name="domain_force">[ ('type', '!=', 'private')]</field>
+        <field name="groups" eval="[(4, ref('modulesell_name_own_documents'))]" />
+    </record> -->
+
+
+</odoo>
